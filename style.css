@@ -1,0 +1,266 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #2d2d2d;
+    background-color: #f3f4f6;
+}
+
+a {
+    text-decoration: none;
+    color: #ff6600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #2d2d2d;
+}
+
+/* Header */
+header {
+    background: #ff6600;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+header .menu li {
+    margin: 0;
+}
+
+header .menu li a {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #ff6600;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #cc5200;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background: #993d00;
+}
+
+/* Produtos Section */
+.produtos {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produtos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.produtos .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.produtos article {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    width: calc(33.333% - 1rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.produtos article img {
+    width: 100%;
+    height: auto;
+}
+
+.produtos article h3 {
+    padding: 1rem 0;
+}
+
+.produtos article p {
+    padding: 0 1rem 1rem;
+}
+
+.produtos article .btn {
+    display: block;
+    padding: 0.75rem;
+    margin: 1rem auto;
+    background: #ff6600;
+    color: #fff;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.produtos article .btn:hover {
+    background: #cc5200;
+}
+
+/* Detalhes do Produto */
+.produto-detalhes {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produto-detalhes h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.produto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.produto-container img {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+    max-width: 400px;
+}
+
+.produto-container .descricao {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Formulário de Contato */
+.contato {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contato h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    padding: 0.75rem;
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #cc5200;
+}
+
+/* Rodapé */
+footer {
+    background: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .footer-links {
+    margin-bottom: 1rem;
+}
+
+footer .footer-links a {
+    color: #ff6600;
+    margin: 0 0.5rem;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .produtos article {
+        width: calc(100% - 2rem);
+    }
+    .produto-container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .produtos article {
+        width: calc(50% - 1rem);
+    }
+}

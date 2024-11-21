@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Fios de Ouro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Loja Virtual</div>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="produto-detalhes">
+            <h1 id="produto-nome"></h1>
+            <div class="produto-container">
+                <img id="produto-imagem" src="" alt="">
+                <div class="descricao">
+                    <p id="produto-descricao"></p>
+                    <p><strong>Preço:</strong> <span id="produto-preco"></span></p>
+                    <button class="btn">Comprar Agora</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <h5>heric</h5>
+            <a href="https://www.linkedin.com/in/heric-barros-666b57307/">linkedlin</a>
+            <a href="https://www.instagram.com/hc.sousaa/">Instagram</a>
+            <a href="https://github.com/sherek231">Github</a>
+            <br>
+            <h5>Kauy</h5>
+            <a href="https://www.linkedin.com/in/kauy-santos-616223323/">linkedlin</a>
+            <a href="https://www.instagram.com/_kkauy__05_/">Instagram</a>
+            <a href="https://github.com/kaudy05">Github</a>
+        </div>
+        <p>&copy; 2024 Loja Virtual - Todos os direitos reservados.</p>
+        <p>Direitos de:
+            Heric Barros De sousa<br>
+            Kauy Dos Santos Ferreira
+        </p>
+    </footer>
+
+    <script>
+        // Lista de produtos
+        const produtos = {
+            1: {
+                nome: "L'Oréal Professionnel Serie Expert Absolut Repair Gold Quinoa + Protein - Máscara Capilar 500g",
+                descricao: "Máscara de tratamento intenso para cabelos danificados. L'Oréal Professionnel Serie Expert Absolut Repair Gold Quinoa + Protein Instant Resurfacing restaura profundamente, devolvendo saúde e brilho aos fios.",
+                imagem: "produto 3.png", // Caminho correto da imagem
+                preco: "R$ 99,90"
+            },
+            2: {
+                nome: "Cadiveu Professional Nutri Glow - Shampoo 980ml",
+                descricao: "Shampoo para todos os tipos de cabelos secos, ressecados e sem vida. Cadiveu Professional Nutri Glow limpa respeitando a integridade da fibra dos fios ressecados.",
+                imagem: "produto 1.png", // Caminho correto da imagem
+                preco: "R$ 129,90"
+            },
+            3: {
+                nome: "Joico Hydra Splash Hydrating Conditioner Smart Release - Condicionador 1L",
+                descricao: "Condicionador para cabelos ressecados. Hidrata, desembaraça e restaura a maciez sem pesar os fios.",
+                imagem: "produto 2.png",
+                preco: "R$ 159,90"
+            },
+            4: {
+                nome: "Redken Extreme Length Shampoo - Shampoo Fortalecedor 300ml",
+                descricao: "Shampoo fortalecedor para cabelos quebradiços e com dificuldade de crescimento. Proporciona resistência e brilho.",
+                imagem: "produto 4.png",
+                preco: "R$ 159,90"
+            },
+            5: {
+                nome: "Wella Professionals Invigo Nutri-Enrich - Máscara 500ml",
+                descricao: "Máscara de hidratação profunda e nutrição intensa. Possui fragrância luxuosa e age suavizando a fibra capilar.",
+                imagem: "produto 5.png",
+                preco: "R$ 89,90"
+            },
+            6: {
+                nome: "Óleo Capilar Light Moroccanoil Treatment 100 ml",
+                descricao: "Óleo capilar leve para controle de frizz, desembaraço e brilho intenso, sem deixar os cabelos pesados.",
+                imagem: "produto 6.png",
+                preco: "R$ 100,90"
+            }
+        };
+    
+        // Obtém o ID do produto da URL
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+    
+        // Preenche os detalhes do produto na página
+        if (produtos[id]) {
+            document.getElementById("produto-nome").textContent = produtos[id].nome;
+            document.getElementById("produto-descricao").textContent = produtos[id].descricao;
+            document.getElementById("produto-imagem").src = produtos[id].imagem; // Adiciona a imagem ao src
+            document.getElementById("produto-imagem").alt = produtos[id].nome; // Adiciona o texto alternativo
+            document.getElementById("produto-preco").textContent = produtos[id].preco;
+        } else {
+            document.querySelector(".produto-detalhes").innerHTML = "<h1>Produto não encontrado</h1>";
+        }
+    </script>
+    
+</body>
+</html>
